@@ -7,29 +7,27 @@
  */
 int main(void)
 {
-	int x = '0';
+	int x, y;
 
-	while (x <= '8')
+	for (x = 48; x < 58; x++)
 	{
-		int y = x;
-
-		while (y <= '9')
+		for (y = x; y < 58; y++)
 		{
-			putchar(x);
-			putchar(y);
-			y++;
-
-			if (x == '0' && y == '1')
+			if (x != y)
 			{
-				continue;
-			}
-			else
-			{
-				putchar(',');
-				putchar(' ');
+				putchar(x);
+				putchar(y);
+				if (x == 56 && y == 57)
+				{
+					continue;
+				}
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
-		x++;
 	}
 	putchar('\n');
 

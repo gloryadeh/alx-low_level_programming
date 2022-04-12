@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 /**
- * _islower -checks for lowercase characters
- * @c: The integer to input
+ * _islower - checks for lowercase characters
+ * @c: This is the character to print
  *
  * Return: Always 0 (Success)
  */
 int _islower(int c)
 {
-	if (islower(c))
+	if (islower(c) > 0)
 	{
 		return (1);
 	}

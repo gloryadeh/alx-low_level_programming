@@ -18,7 +18,7 @@ void print_times_table(int n)
 			{
 				break;
 			}
-			rsult = i *  j;
+			result = i *  j;
 
 			if ((i == n - 1) && (j == n - 1))
 			{

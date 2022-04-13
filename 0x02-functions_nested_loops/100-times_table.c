@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_times_table = prints n time tables
+ * print_times_table - prints n time tables
  * @n: integer
  *
  * Return: 0
@@ -20,7 +20,7 @@ void print_times_table(int n)
 			}
 			rsult = i *  j;
 
-			if (i == n - && j == n - 1)
+			if ((i == n - 1) && (j == n - 1))
 			{
 				if (result < 0)
 				{

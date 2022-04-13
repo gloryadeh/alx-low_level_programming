@@ -20,7 +20,7 @@ void print_times_table(int n)
 			}
 			result = i *  j;
 
-			if ((i == n - 1) && (j == n - 1))
+			if (i == n - 1 && j == n - 1)
 			{
 				if (result < 0)
 				{

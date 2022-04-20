@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 #include <string.h>
 
 /**
@@ -7,8 +8,8 @@
  */
 void rev_string(char *s)
 {
-	int i, length;
-	char *start, *end, *temp;
+	int i, len;
+	char *start, *end, temp;
 
 	len = strlen(s);
 	start = s;

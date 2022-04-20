@@ -26,7 +26,7 @@ void puts_half(char *s)
 			continue;
 		} else
 		{
-			printf("%c". s[i]);
+			printf("%c", s[i]);
 		}
 	}
 	printf("\n");

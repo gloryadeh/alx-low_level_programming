@@ -8,7 +8,7 @@
  *
  * Return: copied string
  */
-char *_strcpy(char *dest, car *src)
+char *_strcpy(char *dest, char *src)
 {
 	return (strcpy(dest, src));
 }

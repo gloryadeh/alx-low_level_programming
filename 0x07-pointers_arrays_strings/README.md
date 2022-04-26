@@ -7,3 +7,4 @@ This a readme file
 5-strstr locates a substring
 7-print_chessboard prints the chessboard
 8-print_diagsums prints the sum of two diagonals of a square matrix of integers
+100-set_string sets value of a pointer to a char

@@ -5,30 +5,24 @@
  * @haystack: string
  * @needle: substring
  *
- * Return: pointer to beginning of located string
+ * Return: 0
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
-
-	i = 0;
-
-	while (haystack)
+	for (; *haystack != '\0'; haystack++)
 	{
-		j = 0;
-		while (needle[j])
+		char *l = haystack;
+		char *p = needle;
+		
+		while (*l == *p && *p != '\0')
 		{
-			if (haystack[i] == needle[j])
-			{
-				return (&haystack[i]);
-			}
-			else
-			{
-				break;
-			}
-			j++;
+			l++;
+			p++;
 		}
-		i++;
+		if (*p == '\0')
+		{
+			return (haystack);
+		}
 	}
 	return (0);
 }

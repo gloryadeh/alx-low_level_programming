@@ -10,4 +10,4 @@ unsigned int _strspn(char *s, char *accept);
 
 char *_strpbrk(char *s, char *accept);
 
-char *_srstr(char *haystack, char *needle);
+char *_strstr(char *haystack, char *needle);

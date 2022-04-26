@@ -5,3 +5,4 @@ This a readme file
 3-strspn gets the legth of a prefix substring
 4-strpbrk seraches a string for any set of bytes
 5-strstr locates a substring
+7-print_chessboard prints the chessboard

@@ -6,3 +6,4 @@ This a readme file
 4-strpbrk seraches a string for any set of bytes
 5-strstr locates a substring
 7-print_chessboard prints the chessboard
+8-print_diagsums prints the sum of two diagonals of a square matrix of integers

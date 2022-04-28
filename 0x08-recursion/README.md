@@ -5,3 +5,4 @@ This is a readme file.
 3-factorial returns the factorial of a given number.
 4-pow_recursion returns the power of a number to another number.
 5-sqrt_recursion returns the natural square of a number.
+6-is_prime_number.c returns 1 if input integer is 1.

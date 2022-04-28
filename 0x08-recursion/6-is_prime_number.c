@@ -11,7 +11,7 @@ int print_a(int a, int b)
 {
 	if (a <= 1 || (a != b && a % b == 0))
 	{
-		return (o);
+		return (0);
 	}
 	else if (a == b)
 	{
@@ -21,7 +21,7 @@ int print_a(int a, int b)
 }
 
 /**
- * is_prime_number - prints prime
+ * iis_prime_number - prints prime
  * @n: number
  *
  * Return: 1 or 0;

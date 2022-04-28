@@ -7,3 +7,4 @@ This is a readme file.
 5-sqrt_recursion returns the natural square of a number.
 6-is_prime_number.c returns 1 if input integer is 1.
 100-palindrome checks if string is palindrom.
+ 101-wildcmp compares two strings and checks if identical

@@ -21,7 +21,7 @@ int print_a(int a, int b)
 }
 
 /**
- * iis_prime_number - prints prime
+ * is_prime_number - prints prime
  * @n: number
  *
  * Return: 1 or 0;

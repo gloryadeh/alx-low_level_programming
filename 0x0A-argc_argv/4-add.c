@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 {
   int i;
   int sum;
+  int count;
   
   if (argc == 1)
   {

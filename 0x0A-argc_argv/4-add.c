@@ -22,9 +22,9 @@ int main(int argc, char *argv[])
   count = 1;
   while (count < argc)
   {
-    for (i = 0; argv[count] != '\0'; i++)
+    for (i = 0; argv[count][i] != '\0'; i++)
     {
-      if (!(isdigit(argv[count])))
+      if (!(isdigit(argv[count][i])))
       {
         printf("Error\n");
         return (1);

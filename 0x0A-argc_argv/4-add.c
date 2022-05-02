@@ -14,12 +14,15 @@ int main(int argc, char *argv[])
 	int i;
 	int count;
 	int sum;
+	
+	count = 1;
+	sum = 0;
 
 	if (argc == 1)
 	{
 		printf("0\n");
+		return (0);
 	}
-	count = 1;
 	while (count < argc)
 	{
 		for (i = 0; argv[count][i] != '\0'; i++)

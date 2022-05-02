@@ -2,38 +2,54 @@
 #include <stdlib.h>
 
 /**
- * main - function
- * @argc: length of argv
- * @argv: number of argument
- * Return: Always 0
- */
+* main - Entry
+* @argc: argument count
+* @argv: arhument vector
+
+* Return: 0
+*/
 int main(int argc, char *argv[])
 {
-	int position, total, change, aux;
-	int coins[] = {25, 10, 5, 2, 1, '\0'};
-	position = total = change = aux = 0;
-
-	if (argc != 2)
+	int cents, coins = 0;
+	
+	if (argc == 2)
+	{
+		cents = atoi(argv[1]);
+		while (cents > 0)
+		{
+			if (cents % 25 < cents)
+			{
+				cents -= 25;
+				coins++;
+			}
+			else if (cents % 10 < cents)
+			{
+				cents -= 10;
+				coins++;
+			}
+			else if (cents % 5 < cents)
+			{
+				cents -= 5;
+				coins++;
+			}
+			else if (cents % 2 < cents)
+			{
+				cents -= 2;
+				coins+++;
+			}
+			else if (cents % 1 < cents)
+			{
+				cents -= 1;
+				coins++;
+			}
+		}
+	}
+	else
 	{
 		printf("Error\n");
 		return (1);
 	}
-	total = atoi(argv[1]);
-	if (total <= 0)
-	{
-		printf("0\n");
-		return (0);
-	}
-	while (coins[position] != '\0')
-	{
-		if (total >= coins[position])
-		{
-			aux = (total / coins[position]);
-			change += aux;
-			total -= (coins[position] * aux);
-		}
-		position++;
-	}
-	printf("%d\n", change);
+	printf("%d\n", coins);
+	
 	return (0);
 }

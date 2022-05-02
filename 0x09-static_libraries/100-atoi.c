@@ -1,95 +1,20 @@
-#include "main.h"
-
 /**
- *
- *  * is_numerical - check if int
- *
- *   * @n: number
- *
- *    *
- *
- *     * Return: 1 if number else 0
- *
- *      */
-
-int is_numerical(unsigned int n)
-
-{
-
-		return (n >= '0' && n <= '9');
-
-}
-
-/**
- *
- *  * _atoi - converts string to integer
- *
- *   * @s: string
- *
- *    *
- *
- *     * Return: integer
- *
- *      */
-
+* _atoi - changes a string to an int
+* @s: the string to be changed
+*
+* Return: the converted int
+*/
 int _atoi(char *s)
-
 {
-
-		unsigned int number, i;
-
-			int sign;
-
-
-
-				sign = 1;
-
-					number = 0;
-
-
-
-						for (i = 0; s[i] != '\0'; i++)
-
-								{
-
-											if (is_numerical(s[i]))
-
-														{
-
-																		number = (s[i] - 48) + number * 10;
-
-																				} else
-
-																							{
-
-																											if (number > 0)
-
-																															{
-
-																																				break;
-
-																																							}
-
-																													}
-
-
-
-																						if (s[i] == ' ')
-
-																									{
-
-																													continue;
-
-																															} else if (s[i] == '-')
-
-																																		{
-
-																																						sign *= -1;
-
-																																								}
-
-																																}
-
-							return (number * sign);
-
+int i = 1;
+unsigned int num = 0;
+do {
+if (*s == '-')
+i *= -1;
+else if (*s >= '0' && *s <= '9')
+num = num * 10 + (*s - '0');
+else if (num > 0)
+break;
+} while (*s++);
+return (num *i);
 }

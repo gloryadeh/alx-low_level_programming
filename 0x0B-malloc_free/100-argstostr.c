@@ -42,7 +42,7 @@ char *argstostr(int ac, char **av)
 		}
 		if (str[k] == '\0')
 		{
-			str[k + 1] = '\n';
+			str[k++] = '\n';
 		}
 	}
 	return (str);

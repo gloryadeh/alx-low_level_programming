@@ -30,7 +30,7 @@ char **strtow(char *str)
 	char **aout;
 	unsigned int c, height, i, j, a1;
 
-	if (str == NULL || *str == '\0 ')
+	if (str == NULL || *str == '\0')
 		return (NULL);
 	for (c = height = 0; str[c] != '\0'; c++)
 		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
@@ -41,7 +41,7 @@ char **strtow(char *str)
 		free(aout);
 		return (NULL);
 	}
-	for (1 = a1 = 0; i < height; i++)
+	for (i = a1 = 0; i < height; i++)
 	{
 		for (c = a1; str[c] != '\0'; c++)
 		{

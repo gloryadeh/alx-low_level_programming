@@ -1,8 +1,11 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * malloc_checked - allocates memory using malloc
  * @b: variable
+ *
+ * Return: memory
  */
 void *malloc_checked(unsigned int b)
 {
@@ -13,4 +16,6 @@ void *malloc_checked(unsigned int b)
 	{
 		exit(98);
 	}
+
+	return (p);
 }

@@ -15,7 +15,7 @@ void print_opcodes(char *a, int n)
 	for (i = 0; i < n; i++)
 	{
 		printf("%.2hhx", a[i]);
-		if (i < n -1)
+		if (i < n - 1)
 		{
 			printf(" ");
 		}
@@ -23,8 +23,8 @@ void print_opcodes(char *a, int n)
 	printf("\n");
 }
 
-
-/** main - Entry pont
+/**
+ * main - Entry point
  * @argc: argument count
  * @argv: argument vector
  *
@@ -36,8 +36,8 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		 printf("Error\n");
-		 exit(1);
+		printf("Error\n");
+		exit(1);
 	}
 	n = atoi(argv[1]);
 	if (n < 0)
@@ -46,6 +46,5 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 	print_opcodes((char *)&main, n);
-	
 	return (0);
 }

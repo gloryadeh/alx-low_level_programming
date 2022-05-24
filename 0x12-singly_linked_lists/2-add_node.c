@@ -9,6 +9,7 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
+	unsigned int i;
 	list_t *node;
 
 	node = (struct list_s *)malloc(sizeof(list_t));
@@ -18,6 +19,9 @@ list_t *add_node(list_t **head, const char *str)
 	}
 	node->str = strdup(str);
 
+	for(i = 0; node->str[i]; i++)
+	{}
+	node->len = i;
 	if (head == NULL)
 	{
 		*head = node;
@@ -25,7 +29,8 @@ list_t *add_node(list_t **head, const char *str)
 	{
 		node->next = *head;
 		*head = node;
+		return (*head);
 	}
 
-	return (*head);
+	return (0);
 }

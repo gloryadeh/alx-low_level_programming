@@ -5,16 +5,13 @@
  * print_list - prints the elements in a list
  * @h: pointer to list
  *
- * Return: number of nodes
+ * Return: number of elements
  */
 size_t print_list(const list_t *h)
 {
 	size_t count;
 
-	if (h == NULL)
-		return (0);
-
-	for (count = 1; h->next != NULL; count++)
+	for (count = 0; h != NULL; count++)
 	{
 		if (h->str == NULL)
 		{
@@ -26,6 +23,5 @@ size_t print_list(const list_t *h)
 		}
 		h = h->next;
 	}
-	printf("[%u] %s\n", h->len, h->str);
 	return (count);
 }

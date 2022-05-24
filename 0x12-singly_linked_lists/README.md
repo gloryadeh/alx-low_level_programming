@@ -3,3 +3,4 @@ This is a readme file
 1-list_len returns number of elements in a linked list
 2-add_node adds a new node at the beginning of the list
 3-add_node_end adds a new node to the end of the list
+4-free_list frees a list

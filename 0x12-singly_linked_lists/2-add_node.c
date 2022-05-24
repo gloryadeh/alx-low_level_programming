@@ -1,5 +1,5 @@
 #include "lists.h"
-
+#include <string.h>
 /**
  * add_node - adds a new node to the beginning of the list
  * @head: pointer to head pointer
@@ -19,17 +19,13 @@ list_t *add_node(list_t **head, const char *str)
 	}
 	node->str = strdup(str);
 
-	for (i = 0; node->str[i]; i++)
-	{}
-	node->len = i;
-	node->next = NULL;
-	if (head == NULL)
+	while (str[i] != 0)
 	{
-		*head = node;
-	} else
-	{
-		node->next = *head;
-		*head = node;
+		i++;
 	}
+	node->len = i;
+	node->next = *head;
+	*head = node;
+
 	return (*head);
 }

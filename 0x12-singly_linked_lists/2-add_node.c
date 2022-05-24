@@ -12,7 +12,7 @@ list_t *add_node(list_t **head, const char *str)
 	unsigned int i;
 	list_t *node;
 
-	node = malloc(sizeof(list_t));
+	node = (struct list_s *)malloc(sizeof(list_t));
 	if (node == NULL)
 	{
 		return (NULL);

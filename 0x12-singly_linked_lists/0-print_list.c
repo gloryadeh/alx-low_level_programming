@@ -5,13 +5,16 @@
  * print_list - prints the elements in a list
  * @h: pointer to list
  *
- * Return: number of elements
+ * Return: number of nodes
  */
 size_t print_list(const list_t *h)
 {
 	size_t count;
 
-	for (count = 0; h != NULL; count++)
+	if (h == NULL)
+		return (0);
+
+	for (count = 1; h->next != NULL; count++)
 	{
 		if (h->str == NULL)
 		{

@@ -9,7 +9,7 @@
  */
 size_t print_list(const list_t *h)
 {
-	int count;
+	unsigned int count;
 
 	if (h == NULL)
 	{
@@ -19,7 +19,7 @@ size_t print_list(const list_t *h)
 	{
 		if (h->str == NULL)
 		{
-			printf("[0] (nil)\n");
+			printf("[%u] %s\n", 0, "(nil)");
 		}
 		else
 		{

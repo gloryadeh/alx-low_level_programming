@@ -24,7 +24,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		*head = newnode;
 	} else
 	{
-		while(currptr->next != NULL)
+		while (currptr->next != NULL)
 			currptr = currptr->next;
 		currptr->next = newnode;
 	}

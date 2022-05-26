@@ -4,3 +4,4 @@
 3-add_nodeint_end adds elements to the end of the list
 4-free_listint frees a list
 5-free_listint2 frees a list and sets the head to NULL
+6-pop_listint.c deletes the head node of a list and returns the head nodes data

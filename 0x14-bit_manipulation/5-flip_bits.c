@@ -13,6 +13,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned int count;
 
 	mask = n ^ m;
+	count = 0;
 	while (mask > 0)
 	{
 		/* add 1 if last bit i 1, or 0 if last bit is 0 */

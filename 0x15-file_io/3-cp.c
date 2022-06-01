@@ -11,15 +11,15 @@ int main(int ac, char **av)
 {
 	char buff[1024];
 	int fd_to, fd_from, num_read, num_write;
+	mode_t mode;
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	fd_from = open(av[1], O_RDONLY);
 	if (fd_from == -1)
-	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[1]), exit(98);
-	}
-	fd_to = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 664);
+	mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+	fd_to = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, mode);
 	if (fd_to == -1)
 	{
 		close(fd_from);
@@ -40,12 +40,8 @@ int main(int ac, char **av)
 		}
 	} while (num_read == 1024);
 	if (close(fd_from == -1))
-	{
 		dprintf(STDERR_FILENO, "Can't close fd %d\n", fd_from), exit(100);
-	}
 	if (close(fd_to) == -1)
-	{
 		dprintf(STDERR_FILENO, "Can't close fd %d\n", fd_to), exit(100);
-	}
 	return (0);
 }

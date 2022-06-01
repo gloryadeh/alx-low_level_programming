@@ -35,7 +35,9 @@ int create_file(const char *filename, char *text_content)
 }
 
 /**
- *
+ * _strlen - gets the length of a string
+ * @s: string
+ * Return: lengthof string
  */
 unsigned int _strlen(char *s)
 {

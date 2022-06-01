@@ -9,7 +9,7 @@
  */
 int main(int ac, char **av)
 {
-	char buff[1024];
+	char buff[BUFF_SIZE];
 	int fd_to, fd_from, num_read, num_write;
 	mode_t mode;
 
@@ -26,7 +26,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	}
 	do {
-		num_read = read(fd_from, buff, 1024);
+		num_read = read(fd_from, buff, BUFF_SIZE);
 		if (num_read == -1)
 		{
 			close(fd_from), close(fd_to);
@@ -38,10 +38,15 @@ int main(int ac, char **av)
 			close(fd_from), close(fd_to);
 			dprintf(STDERR_FILENO, "Error, Can't write to %s\n", av[2]), exit(99);
 		}
-	} while (num_read == 1024);
+	} while (num_read == BUFF_SIZE);
 	if (close(fd_from == -1))
+	{
+		close(fd_to);
 		dprintf(STDERR_FILENO, "Can't close fd %d\n", fd_from), exit(100);
+	}
 	if (close(fd_to) == -1)
+	{
 		dprintf(STDERR_FILENO, "Can't close fd %d\n", fd_to), exit(100);
+	}
 	return (0);
 }

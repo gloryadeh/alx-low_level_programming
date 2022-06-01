@@ -11,6 +11,7 @@ int main(int ac, char **av)
 {
 	char buff[1024];
 	int fd_to, fd_from, num_read, num_write;
+	mode_t mode;
 
 	if (ac != 3)
 	{
@@ -21,9 +22,11 @@ int main(int ac, char **av)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[1]), exit(98);
 	}
-	fd_to = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 664);
+	mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+	fd_to = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, mode);
 	if (fd_to == -1)
 	{
+		close(fd_from);
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	}
 	do {

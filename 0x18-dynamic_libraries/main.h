@@ -1,6 +1,8 @@
-#include <string.h>
-#include <ctype.h>
-#include <unistd.h>
+
+#ifndef MAIN_H
+#define MAIN_H
+
+#define EXIT_SUCCESS 0
 
 int _putchar(char c);
 int _islower(int c);
@@ -22,3 +24,5 @@ char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
+
+#endif
